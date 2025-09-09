@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💫🌸💫</title>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Texto blanco por defecto */
+            font-weight: bold;
+            /* Todas las letras en mayúsculas */
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #000, #333); /* Ajuste para fondo oscuro */
+        }
+        .gallery-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); /* Sombra blanca en hover */
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+            color: #fff; /* Blanco */
+        }
+        .nav-link:hover {
+            color: #FFBAD2 ; /* Acento para hover */
+        }
+        p, span {
+            color: #fff; /* Blanco para párrafos y spans */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #fff; /* Blanco para títulos */
+        }
+        .bg-white {
+            background-color: #111 !important; /* Oscuro en lugar de blanco */
+        }
+        .text-gray-800 {
+            color: #fff !important; /* Blanco en lugar de gris oscuro */
+        }
+        .text-gray-600 {
+            color: #ccc !important; /* Gris claro para mejor legibilidad */
+        }
+        .text-gray-500 {
+            color: #aaa !important; /* Gris claro para descripciones */
+        }
+        .bg-gray-800 {
+            background-color: #222 !important; /* Oscuro en footer */
+        }
+        .bg-gray-100 {
+            background-color: #000 !important; /* Negro en fondo general */
+        }
+        .bg-gray-50 {
+            background-color: #111 !important; /* Oscuro en sección gallery */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">Happy birthday🪷 </h1>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#hero" class="nav-link no-underline text-gray-600">💫</a></li>
+                <li><a href="#about" class="nav-link no-underline text-gray-600">Les raison pour adorer toi</a></li>
+                <li><a href="#gallery" class="nav-link no-underline text-gray-600">Galería</a></li>
+                <li><a href="#contact" class="nav-link no-underline text-gray-600">Contacto</a></li>
+            </ul>
+            <button class="md:hidden bg-gray-800 text-white px-2 rounded" id="menu-toggle">☰</button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
+            <ul>
+                <li><a href="#hero" class="no-underline text-gray-600 block py-2">Inicio</a></li>
+                <li><a href="#about" class="no-underline text-gray-600 block py-2">Acerca de</a></li>
+                <li><a href="#gallery" class="no-underline text-gray-600 block py-2">Galería</a></li>
+                <li><a href="#contact" class="no-underline text-gray-600 block py-2">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg text-center py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-pink-600">HOLA MUNDO</h2>
+            <p class="text-lg text-gray-600 mb-8">Bienvenido a porq la .</p>
+            <a href="#gallery" class="bg-pink-400 hover:bg-yellow-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg transition duration-300">Ver Galería</a>
+            <div class="mt-10">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dbdf0687-2897-4171-a744-dafe8d17f83c.png" alt="Vista panorámica amplia de un lago cristalino en las montañas al atardecer, con reflejos dorados del sol en el agua, rodeado de pinos verdes y cielos nublados dramáticos, composición paisajística con horizonte en el tercio inferior" class="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold text-gray-800 mb-10">Acerca de Mí</h3>
+            <div class="flex flex-col md:flex-row items-center justify-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
+                    <p class="text-gray-600 leading-relaxed">12 de septiemrbre.</p>
+                    <p class="mt-4 text-gray-600">cas.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ab849233-1771-4fa7-8816-91cc5f582344.png" alt="Fotógrafo sonriente en posición de trabajo en un parque urbano, sosteniendo una cámara vintage, con fondo de follaje verde y luz natural difusa, expresión de concentración y alegría profesional en vestimenta casual" class="rounded-full shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-gray-800 text-center mb-10">Galería de Fotos</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Imagen 1 -->
+                <div class="gallery-item cursor-pointer" onclick="openModal('img1')">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3730b090-b836-47e6-b764-54ec80a57575.png" alt="Fotografía de un bosque otoñal con hojas rojas y amarillas cayendo sobre un sendero de tierra, iluminación suave del sol a través de las ramas, textura detallada en las hojarascas y troncos nudosos, composición simétrica con profundidad de campo" class="w-full h-48 object-cover rounded-lg shadow-md">
+                    <p class="mt-2 text-sm text-gray-500">Bosque Otoñal</p>
+                </div>
+                <!-- Imagen 2 -->
+                <div class="gallery-item cursor-pointer" onclick="openModal('img2')">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4ee3cddb-1790-4af9-9a49-2ac4bdee85a0.png" alt="Retratos de dos amigos riendo junto a un puerto marítimo al amanecer, con barcos y olas en el fondo, tonos azules fríos dominando los cielos y el agua, expresiones libres y felices, enfocado en las emociones humanas" class="w-full h-48 object-cover rounded-lg shadow-md">
+                    <p class="mt-2 text-sm text-gray-500">Amigos en el Puerto</p>
+                </div>
+                <!-- Imagen 3 -->
+                <div class="gallery-item cursor-pointer" onclick="openModal('img3')">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8c3d1b65-68b4-4224-b631-987c17da766e.png" alt="Cascada poderosa fluyendo sobre rocas verdes en una selva tropical, niebla y rocío rodeando, iluminación natural brillante filtrada por el follaje, composición vertical con énfasis en el flujo del agua" class="w-full h-48 object-cover rounded-lg shadow-md">
+                    <p class="mt-2 text-sm text-gray-500">Cascada en xd</p>
+                </div>
+                <!-- Imagen 4 -->
+                <div class="gallery-item cursor-pointer" onclick="openModal('img4')">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f1752e0c-8ed2-44dc-b893-0e11773259c4.png" alt="Vista urbana del skyline de una gran ciudad con rascacielos reflejados en el río, al atardecer con luces fluorescentes emergiendo, puente peatonal arriba, perspectiva baja para mayor impacto dramático" class="w-full h-48 object-cover rounded-lg shadow-md">
+                    <p class="mt-2 text-sm text-gray-500">Skyline Urbano</p>
+                </div>
+                <!-- Imagen 5 -->
+                <div class="gallery-item cursor-pointer" onclick="openModal('img5')">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e68e6e63-aa3b-4e5c-86f5-8f8573396e10.png" alt="Flor silvestre morada en un campo de lavanda bajo un cielo despejado, pétalos delgados con gotas de rocío, enfoque macro para resaltar detalles orgánicos, luz natural dorada suavizando la escena campestre" class="w-full h-48 object-cover rounded-lg shadow-md">
+                    <p class="mt-2 text-sm text-gray-500">Flor en Campo</p>
+                </div>
+                <!-- Imagen 6 -->
+                <div class="gallery-item cursor-pointer" onclick="openModal('img6')">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bdc6075c-02fc-4ebb-b236-08edca5bcced.png" alt="Escultura antigua de piedra en un jardín histórico con musgo cubriendo, rodeada de setos verdes podados, iluminación suave con sombras largas, composición triangular enfocada en texturas y antigüedad" class="w-full h-48 object-cover rounded-lg shadow-md">
+                    <p class="mt-2 text-sm text-gray-500">Escultura Antigua</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 12 spetiembre.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="absolute top-5 right-5 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+        <img id="modal-img" src="" alt="" class="modal-content">
+    </div>
+
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Modal functions
+        function openModal(imgId) {
+            const images = {
+                'img1': ['https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/23c8dd50-7fdb-4a0f-92a6-2deeecd65df7.png', 'Bosque Otoñal - Vista detallada con hojarasca rojiza cayendo sobre sendero tierra suave, iluminación solar filtrada creando patrones moteados'],
+                'img2': ['https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6ed8d5ae-9ba1-4823-a5ae-be077c65f2c9.png', 'Amigos en el Puerto - Retratos Alegres con expresiones animadas, fondo urbano con reflejos azules en el agua'],
+                'img3': ['https://placehold.co/800x600', 'Cascada en Selva - Agua cauce precipitado entre rocas verdes, niebla envolvente y luz verde esmeralda'],
+                'img4': ['https://placehold.co/800x600', 'Skyline Urbano - Horizonte de la ciudad con contraste entre luces fluorescentes y atmósfera azul anochecer'],
+                'img5': ['https://placehold.co/800x600', 'Flor en Campo - Lavanda púrpura con pétalos delgados, enfoque macro mostrando gotas de rocío bajo cielo soleado'],
+                'img6': ['https://placehold.co/800x600', 'Escultura Antigua - Estatua de piedra con musgo creciendo, en jardín histórico con sombras profundas y textura rugosa']
+            };
+            if (images[imgId]) {
+                document.getElementById('modal-img').src = images[imgId][0];
+                document.getElementById('modal-img').alt = images[imgId][1];
+            }
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Close modal on outside click
+        window.addEventListener('click', (e) => {
+            if (e.target === document.getElementById('modal')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
